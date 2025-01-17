@@ -32,5 +32,5 @@ jobs:
       run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project hazel-sky-447523-s1
 
     - name: Deploy to GKE
-      run: helm install flask ./flask
+      run: helm upgrade --install flask ./flask --set tag=2.0.0
       
